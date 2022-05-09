@@ -1,0 +1,23 @@
+{
+  "name": "rent-a-partner",
+  "version": "1.0.0",
+  "description": "Kind of like tinder but for single people who want to stay single and avoid questions at family functions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ferronique-May-bbd/rent-a-partner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ferronique-May-bbd/rent-a-partner/issues"
+  },
+  "homepage": "https://github.com/Ferronique-May-bbd/rent-a-partner#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
