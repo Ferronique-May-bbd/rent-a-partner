@@ -1,0 +1,203 @@
+#home .hero-banner {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column
+
+}
+
+#home .hero-banner h1{
+    font-size: 30px;
+}
+#home .hero-banner p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.peach-button button{
+    padding: 12px 20px 12px 12px;
+    background: #EB9390;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 17px;
+    border: 0;
+    margin-top: 20px;
+}
+
+#home .peach-button .fa-arrow-right,
+#home .blue-button .fa-repeat {
+    margin-left: 10px;
+}
+
+#home .hero-banner img {
+    width: 100px;
+}
+
+#home .flex-row{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#home .about-rap h2{
+    font-size: 25px;
+}
+
+.about-rent-a-partner {
+    width: 100%;
+}
+
+#about-rent-a-partner-desktop {
+    display: none;
+}
+
+.about-rap section h3{
+    font-size: 20px;
+}
+
+.about-rap section p{
+    font-size: 16px;
+}
+
+.testimony-image {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#home .testimonies p{
+    font-size: 16px;
+}
+
+#home .become-a-partner {
+    background-color: #ffffff;
+    padding: 15px 28px;
+    border-radius: 10px;
+}
+
+.blue-button button{
+    padding: 12px 20px 12px 12px;
+    background: #86C8DD;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 17px;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.become-a-partner-column img{
+    display: none;
+}
+
+@media only screen and (min-device-width: 768px)  {
+    #home .hero-banner h1,
+    #home .hero-banner p{
+        z-index: 2;
+        position: absolute;
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #home .hero-banner h1 {
+        font-size: 41px;
+        top: 2%;
+        left: 0;
+        right: 0;
+        
+    }
+
+    #home .hero-banner p {
+        font-size: 24px;
+        top: 13%;
+        left: 0;
+        right: 0;
+    }
+
+    #home .hero-banner img {
+        width: 27%;
+        padding-top: 90px;
+    }
+
+    #home .peach-button button {
+        position: absolute;
+        top: 19%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 204px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 18px;
+    }
+
+    #home .about-rap h2 {
+        font-size: 36px;
+    }
+
+    .about-rent-a-partner {
+        width: 50%;
+    }
+
+    .about-rap section h3 {
+        font-size: 25px;
+    }
+
+    .about-rap section p {
+        font-size: 18px;
+    }
+
+    .testimony {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 30px 0;
+    }
+
+    .testimony-image {
+        width: 50%;
+    }
+
+    .testimonies p {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+    }
+    
+}
+
+@media only screen and (min-width : 922px) {
+    #home .hero-banner h1,
+    #home .hero-banner p{
+        width: 700px;
+    }
+
+    #home .hero-banner h1 {
+        font-size: 60px;
+        top: -1%;
+    }
+
+    #home .hero-banner p {
+        font-size: 32px;
+    }
+
+    #about-rent-a-partner-desktop {
+        display: block;
+        width: 80%;
+    }
+    #about-rent-a-partner-mobile{
+        display: none;
+    }
+
+    .become-a-partner {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .become-a-partner-column img{
+        display: block;
+    }
+}

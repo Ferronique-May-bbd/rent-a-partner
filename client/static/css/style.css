@@ -1,4 +1,4 @@
-main {
+/* main {
     position: fixed;
     top: 5px;
     left: 255px;
@@ -30,4 +30,32 @@ li {
 li a {
     text-decoration: none;
     color: azure;
+} */
+html{
+    width: 100%;
+}
+
+main {
+ max-width: 950px;
+ margin: 0 auto;
+}
+
+body {
+    background-color: #E4E4E4;
+    padding: 0 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p {
+    color: #000000;
+    font-family: 'Inter';
+}
+
+article {
+    margin-bottom: 10px;
 }
