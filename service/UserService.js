@@ -1,11 +1,10 @@
-//import DbContext from "./DBContext.js";
 const DbContext = require("./DBContext");
 
 class UserService {
     static userLogin(loginDetails) {
         let db = new DbContext();
         let conn = db.getConnection();
-
+        
         return new Promise((resolve, reject) => {
             conn.query(`select * from User where Email=${loginDetails.Email}`, (error, result) => {
                 if(error) {
@@ -20,7 +19,6 @@ class UserService {
     static userRegistration(userDetails) {
         let db = new DbContext();
         let conn = db.getConnection();
-
         return new Promise((resolve, reject) => {
             conn.query("select * from Role", (error, result) => {
                 if(error) {
@@ -35,7 +33,6 @@ class UserService {
     static getRoles() {
         let db = new DbContext();
         let conn = db.getConnection();
-
         return new Promise((resolve, reject) => {
             conn.query("select * from Role", (error, result) => {
                 if(error) {
@@ -48,9 +45,4 @@ class UserService {
     }
 }
 
-async function test() {
-    let roles = await UserService.getRoles();
-    console.log(roles);
-}
-
-test();
+module.exports = UserService;

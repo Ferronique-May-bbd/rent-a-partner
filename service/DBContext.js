@@ -1,6 +1,3 @@
-//import { createRequire } from "module";
-//const require = createRequire(import.meta.url)
-
 class DbContext {
     constructor() {
         const mysql = require("mysql");
@@ -14,6 +11,12 @@ class DbContext {
     }
 
     getConnection() {
+        this.connection.connect(error => {
+            if(error) {
+                console.log("Error: " + error.message);
+                return;
+            }
+        });
         return this.connection;
     }
 
