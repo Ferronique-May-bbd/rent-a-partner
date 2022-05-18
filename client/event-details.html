@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html id="top" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/event-details.css">
+    <link rel="stylesheet" href="static/css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <script src="https://kit.fontawesome.com/fe4b986857.js" crossorigin="anonymous"></script>
+    <script src="static/components/footer.js" type="text/javascript" defer></script>
+
+    <title>Event details</title>
+</head>
+<body>
+    
+    <main id="event-details">
+        <article>
+            <section>
+                <h1>Event details</h1>
+                <p>By giving us the event type and date we can give you more accurate suggestions</p>
+            </section>
+
+            <section class="event-type-date">
+                <form method="get" for>
+                    <label class="lbl">Event<i class="required"></i></label>
+                    <select id="GenderOfInterest" class="control control-select">
+                        <option value="family-event" selected>Family event</option>
+                        <option value="work-event">Work-event</option>
+                        <option value="friend-event">Friend event</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input class="datepicker" type="date" autofocus>
+
+                    <button type="submit" class="btn btn-peach">Done!</button>
+                </form>
+
+            </section>
+        </article>
+
+    </main>
+    <script type="module" src="static/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+body {
+    background-color: white;
+}
+
+#event-details{
+    max-width: 540px;
+}
+
+#event-details article {
+    padding-top: 80px;
+}
+
+.event-type-date {
+    margin-top: 60px;
+}
+
+.datepicker {
+    margin-top: 15px;
+}
+
+.btn {
+    margin-top: 80px;
+}
