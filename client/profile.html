@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="static/css/login.css" class="css">
+    <link rel="stylesheet" href="static/css/profile.css" class="css">
+</head>
+<body>
+    <main>
+        <section id="image-section">
+            <table>
+                <tr>
+                    <td><img id="picture1" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"><input onclick="document.getElementById('my-pictures1').click()" class="my_pics" type="button" value="+"><input type="file" id="my-pictures1" onchange="loadFile(event, 'picture1')"></td>
+                    <td><img id="picture2" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"><input onclick="document.getElementById('my-pictures2').click()" class="my_pics" type="button" value="+"><input type="file" id="my-pictures2" onchange="loadFile(event, 'picture2')"></td>
+                    <td><img id="picture3" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"><input onclick="document.getElementById('my-pictures3').click()" class="my_pics" type="button" value="+"><input type="file" id="my-pictures3" onchange="loadFile(event, 'picture3')"></td>
+                </tr>
+                <tr>
+                    <td><img id="picture4" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"><input onclick="document.getElementById('my-pictures4').click()" class="my_pics" type="button" value="+"><input type="file" id="my-pictures4" onchange="loadFile(event, 'picture4')"></td>
+                    <td><img id="picture5" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"><input onclick="document.getElementById('my-pictures5').click()" class="my_pics" type="button" value="+"><input type="file" id="my-pictures5" onchange="loadFile(event, 'picture5')"></td>
+                    <td><img id="picture6" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"><input onclick="document.getElementById('my-pictures6').click()" class="my_pics" type="button" value="+"><input type="file" id="my-pictures6" onchange="loadFile(event, 'picture6')"></td>
+                </tr>
+                <tr>
+                    <td><img id="picture7" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"><input onclick="document.getElementById('my-pictures7').click()" class="my_pics" type="button" value="+"><input type="file" id="my-pictures7" onchange="loadFile(event, 'picture7')"></td>
+                    <td><img id="picture8" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"><input onclick="document.getElementById('my-pictures8').click()" class="my_pics" type="button" value="+"><input type="file" id="my-pictures8" onchange="loadFile(event, 'picture8')"></td>
+                    <td><img id="picture9" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"><input onclick="document.getElementById('my-pictures9').click()" class="my_pics" type="button" value="+"><input type="file" id="my-pictures9" onchange="loadFile(event, 'picture9')"></td>
+                  </tr>
+              </table>
+        </section>
+        <section id="details-section">
+            <form method="post" class="form-section">
+                <label class="lbl">Phone Number:</label>
+                <input type="text" class="control" name="phoneNumber" value="">
+                <label class="lbl">Email:</label>
+                <input type="email" class="control" name="email" value="">
+                <label class="lbl">Height:</label>
+                <input type="text" class="control" name="height" value="">
+                <label class="lbl">Race:</label>
+                <input type="text" class="control" name="race" value="">
+                <label class="lbl">Home language:</label>
+                <input type="text" class="control" name="homeLanguage" value="">
+                <label class="lbl">Bio:</label>
+                <textarea id="Bio" class="control" maxlength="1000" placeholder="Start typing here" rows="10"></textarea>
+                <input class="btn btn-peach" type="submit" value="Update" id="submitForm">
+            </form>
+        </section>
+    </main>
+    <script type="text/javascript" src="./static/js/views/project.js"></script>
+</body>
+</html>
