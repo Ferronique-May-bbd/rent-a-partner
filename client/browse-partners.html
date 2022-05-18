@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html id='top' lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/browse-partners.css'>
+    <link rel='stylesheet' href='css/login.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather'>
+    <script src='https://kit.fontawesome.com/fe4b986857.js' crossorigin='anonymous'></script>
+    <script src='components/headerLoggedIn.js' type='text/javascript' defer></script>
+    <script src='components/profileCard.js' type='text/javascript' defer></script>
+
+    <title>Event details</title>
+</head>
+<body>
+    <header-logged-in userDisplayImage='images/hero-image-left.png' userId='1'></header-logged-in>
+    
+    <main id='browse-partners'>
+        <article>
+            <section class='fliter-search'>
+                <a href="#pop-up-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </section>
+
+            <section class='card-container'>
+                <profile-card
+                partnerId='1'
+                partnerName='Name'
+                partnerAge='26'
+                partnerPronouns='She/Her'
+                partnerDistance='16'
+                partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
+                partnerDisplayImage='images/profile-test.jpg'>
+                </profile-card>
+                <profile-card
+                partnerId='1'
+                partnerName='Name'
+                partnerAge='26'
+                partnerPronouns='She/Her'
+                partnerDistance='16'
+                partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
+                partnerDisplayImage='images/profile-test.jpg'>
+                </profile-card>
+                <profile-card
+                partnerId='1'
+                partnerName='Name'
+                partnerAge='26'
+                partnerPronouns='She/Her'
+                partnerDistance='16'
+                partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
+                partnerDisplayImage='images/profile-test.jpg'>
+                </profile-card>
+                <profile-card
+                partnerId='1'
+                partnerName='Name'
+                partnerAge='26'
+                partnerPronouns='She/Her'
+                partnerDistance='16'
+                partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
+                partnerDisplayImage='images/profile-test.jpg'>
+                </profile-card>
+                <profile-card
+                partnerId='1'
+                partnerName='Name'
+                partnerAge='26'
+                partnerPronouns='She/Her'
+                partnerDistance='16'
+                partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
+                partnerDisplayImage='images/profile-test.jpg'>
+                </profile-card>
+            </section>
+            
+        </article>
+
+        <article id='pop-up-search' class="overlay">
+            <section class='popup'>
+                <h2>Not finding what you looking for? Filter Now!</h2>
+                <a class="close" href="#">&times;</a>
+                <section class="content event-type-date">
+                    <form method="get" for>
+                        <label class="lbl">Gender preference</label>
+                        <select id="gender-preference-filter" class="control control-select">
+                            <option value="female" selected>Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                        </select>
+    
+                        <label class="lbl event-date">Event date<i class="required"></i></label>
+                        <input class="control" type="text">
+    
+                        <button type="submit" class="btn btn-peach">Let's go find them!</button>
+                    </form>
+    
+                </section>
+            </section>
+        </article>
+
+    </main>
+    <script type='module' src='js/index.js'></script>
+</body>
+</html>
