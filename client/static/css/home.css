@@ -2,8 +2,8 @@
     width: 100%;
     text-align: center;
     display: flex;
-    flex-direction: column
-
+    flex-direction: column;
+    position: relative;
 }
 
 #home .hero-banner h1{
@@ -112,7 +112,7 @@
 
     #home .hero-banner p {
         font-size: 24px;
-        top: 17%;
+        top: 33%;
         left: 0;
         right: 0;
     }
@@ -124,7 +124,7 @@
 
     #home .peach-button button {
         position: absolute;
-        top: 25%;
+        top: 48%;
         left: 0;
         right: 0;
         margin-left: auto;
@@ -177,16 +177,16 @@
 
     #home .hero-banner h1 {
         font-size: 60px;
-        top: -1%;
+        top: -4%;
     }
 
     #home .hero-banner p {
         font-size: 32px;
-        top: 20%;
+        top: 38%;
     }
 
     #home .peach-button button {
-        top: 29%;
+        top: 59%;
     }
 
     #about-rent-a-partner-desktop {
