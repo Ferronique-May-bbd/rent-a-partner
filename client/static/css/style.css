@@ -38,10 +38,13 @@ article {
 header {
     display: flex;
     flex-direction: row;
+    position: sticky;
+    top: 0;
     align-items: center;
     justify-content: space-between;
     height: 75px;
     padding: 0 24px;
+    z-index: 4;
     background-color: #ffffff;
     color: #fefefe;
 }
@@ -205,6 +208,7 @@ nav .top-nav > li:hover a:link, nav .top-nav > li:active a:link, nav .top-nav > 
     align-items: flex-start;
     background-color: #ffffff;
     width: 100%;
+    margin-top: 60px;
     padding-top: 10px;
 }
 
