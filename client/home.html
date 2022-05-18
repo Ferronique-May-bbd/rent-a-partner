@@ -10,10 +10,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
     <script src="https://kit.fontawesome.com/fe4b986857.js" crossorigin="anonymous"></script>
     <script src="static/components/footer.js" type="text/javascript" defer></script>
+    <script src="static/components/headerLoggedIn.js" type="text/javascript" defer></script>
+    <script src="static/components/headerLoggedOut.js" type="text/javascript" defer></script>
 
     <title>Home - Rent a Partner</title>
 </head>
 <body>
+
+    <header-logged-out></header-logged-out>
+<!-- could maybe use a script and if statement to determine which header to show. Not sure how we determine if a user is logged in yet -->
+    <!-- <header-logged-in userDisplayImage="static/images/hero-image-left.png"></header-logged-in> -->
     
     <main id="home">
 
@@ -25,7 +31,7 @@
                 <img id="hero-image-right" src="static/images/hero-image-right.png" alt="hero-image-right">
             </section>
             
-            <a class="peach-button" href="">
+            <a class="peach-button" href="./login.html">
                 <button>
                     Book a partner
                     <i class="fa-solid fa-arrow-right"></i>
