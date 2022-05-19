@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/login.css" class="css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <script src="https://kit.fontawesome.com/fe4b986857.js" crossorigin="anonymous"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <main>
+        <form method="post" class="form-section">
+            <h4 class="form-title">Account Details</h4>
+
+            <input id="Id" value="0" hidden/>
+            <input id="RoleId" hidden/>
+            
+            <label class="lbl">Name<i class="required"></i></label>
+            <input id="Name" type="text" class="control" maxlength="50" placeholder="Enter your name" required/>
+            
+            <label class="lbl">Surname<i class="required"></i></label>
+            <input id="Surname" type="text" class="control" maxlength="50" placeholder="Enter your surname" required/>
+            
+            <label class="lbl">Phone<i class="required"></i></label>
+            <input id="Phone" type="number" class="control" minlength="10" maxlength="10" placeholder="Enter your phone number" required/>
+            
+            <label class="lbl">Email<i class="required"></i></label>
+            <input id="Email" type="email" class="control" maxlength="150" placeholder="Enter your email address" required/>
+            
+            <label class="lbl">Location<i class="required"></i></label>
+            <address class="w-100">
+                <input id="Location" type="text" class="control" maxlength="50" placeholder="Enter your location" required/>
+            </address>
+            
+            <label class="lbl">Profile Picture<i class="required"></i></label>
+            <input id="ProfilePicUrl" type="file" class="control" placeholder="Select your profile picture" required/>
+            
+            <h4 class="form-title">Profile Details</h4>
+
+            <input id="UserId" hidden/>
+            
+            <label class="lbl">Gender<i class="required"></i></label>
+            <select id="Gender" class="control control-select">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label class="lbl">Date of birth<i class="required"></i></label>
+            <input id="DateOfBirth" type="date" class="control" required/>
+            
+            <label class="lbl">Gender of interest<i class="required"></i></label>
+            <select id="GenderOfInterest" class="control control-select">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label class="lbl">Race</label>
+            <input id="Race" type="text" class="control" maxlength="20" placeholder="Select your race"/>
+            
+            <label class="lbl">Height (centimeters)</label>
+            <input id="Height" type="number" class="control" placeholder="Enter your height (approximately)"/>
+            
+            <label class="lbl">Language</label>
+            <input id="Language" type="text" class="control" maxlength="50" placeholder="Select your first language"/>
+            
+            <label class="lbl">Bio</label>
+            <textarea id="Bio" class="control" maxlength="1000" placeholder="Start typing here" rows="10"></textarea>
+            
+            <button type="button" class="btn btn-peach">Create account</button>
+            <p class="lbl-center">Already have an account?</p>
+            <button onclick="location.href='/login'" type="button" class="btn btn-blue">Sign in</button>
+        </form>
+    </main>
+    <script type="module" src="../static/js/register.js"></script>
+
+</body>
+</html>
