@@ -34,7 +34,7 @@ a,
 li,
 ul,
 ol,
-span {
+span label {
     color: #000000;
     font-family: 'Inter';
 }
@@ -180,13 +180,6 @@ nav .top-nav>li {
     line-height: 50px;
     width: 95%;
     cursor: pointer;
-}
-
-nav .top-nav>li:hover,
-nav .top-nav>li:active,
-nav .top-nav>li:focus,
-nav .top-nav>li.active {
-    background-color: #000000;
 }
 
 nav .top-nav>li:hover a:link,
