@@ -1,3 +1,4 @@
+const res = require("express/lib/response");
 const DbContext = require("./DBContext");
 
 class UserService {
@@ -73,6 +74,19 @@ class UserService {
                 return resolve(result);
             });
         });
+    }
+
+    static getPartnerById(id) {
+        let db = new DbContext();
+        let conn = db.getConnection();
+        return new Promise((resolve, reject) => {
+            conn.query(`select * from User u inner join Profile p on u.Id=p.UserId and u.Id=${id}`, (error, result) => {
+                if(error) {
+                    return reject(error);
+                }
+                return resolve(result);
+            });
+        })
     }
 }
 

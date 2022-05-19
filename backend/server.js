@@ -36,6 +36,11 @@ app.get("/suggested-partners", async (req, res) => {
     res.send(JSON.stringify(result));
 });
 
+app.get("/partner/:id", async (req, res) => {
+    let result = await UserService.getPartnerById(req.params.id);
+    res.send(JSON.stringify(result));
+})
+
 app.listen(process.env.PORT || port, () => {
     console.log(`Server is running on port ${port}...`);
 });
