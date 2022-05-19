@@ -69,6 +69,10 @@ app.get('/event-request', async (req, res) => {
     res.sendFile(path.resolve('', 'pages/myInvites.html'))
 });
 
+app.get('/profile?:id', async (req, res) => {
+    res.sendFile(path.resolve('', 'pages/profile.html'))
+});
+
 app.listen(process.env.PORT || port, () => {
     console.log(`Server is running on port ${port}...`);
 });

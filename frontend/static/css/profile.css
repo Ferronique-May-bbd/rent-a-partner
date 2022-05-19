@@ -1,0 +1,68 @@
+
+.my_pics{
+    background-color: #EB9390;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    z-index: 1;
+}
+
+#my-pictures{
+    visibility: hidden;
+}
+
+#my-pictures:hover{
+    background-color: black;
+    color: #EB9390;
+}
+
+#image-section {
+    margin-top: 5%;
+    width: 50%;
+    margin-left: 10%;
+}
+
+#details-section {
+    width:50%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    border: 5px solid gray;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1330px) {
+    main{
+        flex-direction: column;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        max-width: 30rem;
+        max-height: 30rem;
+    }
+
+    #image-section {
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+}
