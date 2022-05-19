@@ -22,8 +22,8 @@ class UserService {
         let conn = db.getConnection();
         let query = `
         insert into User(RoleId,Name,Surname,Phone,Email,Location,ProfilePicUrl)
-        values(${userDetails.RoleId},'${Name}','${Surname}','${Phone}',
-        '${Email}','${Location}','${ProfilePicUrl}')
+        values(${userDetails.RoleId},'${userDetails.Name}','${userDetails.Surname}','${userDetails.Phone}',
+        '${userDetails.Email}','${userDetails.Location}','${userDetails.ProfilePicUrl}')
         `;
         return new Promise((resolve, reject) => {
             conn.query(query, (error, result) => {
