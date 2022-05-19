@@ -22,6 +22,20 @@ app.get("/roles", async (req, res) => {
     res.send(JSON.stringify(result));
 });
 
+app.get("/suggested-partners", async (req, res) => {
+    let result = await UserService.getSuggestedPartners();
+    res.send(JSON.stringify(result));
+});
+
+app.get("/suggested-partners/:genderPreference/:race/:age/:height", async (req, res) => {
+    // console.log(`gender: ${genderPreference}`);
+    // console.log(`race: ${race}`);
+    // console.log(`age: ${age}`);
+    // console.log(`height: ${height}`);
+    let result = await UserService.getSuggestedPartners();
+    // res.send(JSON.stringify(result));
+});
+
 app.listen(process.env.PORT || port, () => {
     console.log(`Server is running on port ${port}...`);
 });
