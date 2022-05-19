@@ -12,13 +12,6 @@ body{
     font-size: 23px;
 }
 
-.card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 .partner-ad {
     margin-bottom: 20px;
 }
@@ -76,17 +69,16 @@ body{
     font-size: 20px;
     margin-right: 5px;
 }
-.partner-info .fa-user {
+.partner-info .bio-control {
     color: #ffffff;
     font-size: 23px;
 }
 .bio-book-partner {
     display: none;
     padding: 0 24px;
-    width: 100%;
-    max-width: 288px;
 }
-.card:hover + .bio-book-partner {
+
+.bio-book-partner:target {
     display: block;
 }
 
@@ -211,6 +203,12 @@ body{
     .popup{
       width: 70%;
     }
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
     .card {
         height: 224.25px;
@@ -221,8 +219,12 @@ body{
     .mobile-only {
         display: none;
     }
+
     .bio-book-partner {
-    max-width: 51%;
-    padding: 0;
+        max-width: 51%;
+        padding: 0;
+        width: 100%;
     }
+
+    
   }

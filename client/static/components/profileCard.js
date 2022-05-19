@@ -31,7 +31,7 @@ class ProfileCard extends HTMLElement {
                     <span class='distance'>
                         ${partnerDistance != undefined | partnerDistance != null ? `<i class='fa-solid fa-location-dot'></i> ${partnerDistance}km away` : null}
                     </span>
-                    <a href='#show-bio${partnerId}'><i class='fa-regular fa-user'></i></a>
+                    <a href='#show-bio${partnerId}' class='bio-control-fa-user'><i class='bio-control fa-regular fa-user'></i></a>
                 </section>
 
             </section>
