@@ -32,6 +32,10 @@ label {
     font-family: 'Inter';
 }
 
+a{
+    text-decoration: none;
+}
+
 article {
     margin-bottom: 10px;
 }
@@ -194,6 +198,7 @@ nav .top-nav > li:hover a:link, nav .top-nav > li:active a:link, nav .top-nav > 
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    object-fit: cover;
 }
 
 .header-desktop {

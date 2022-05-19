@@ -44,16 +44,15 @@ class UserService {
         });
     }
 
-    static getSuggestedPartners(userId) {
+    static getSuggestedPartners() {
         let db = new DbContext();
         let conn = db.getConnection();
         return new Promise((resolve, reject) => {
-            conn.query(`select * from User`, (error, result) => {
+            conn.query("select u.RoleId, u.Name, u.Surname, u.Location, u.ProfilePicUrl, p.* from `User` u join `Profile` p on u.ID = p.UserId where u.roleId = 1;", (error, result) => {
                 if(error) {
                     return reject(error);
                 }
                 db.closeConnection();
-                console.log(userId);
                 return resolve(result);
             });
         });
