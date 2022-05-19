@@ -12,8 +12,13 @@ function userRegistration(e) {
             "Content-Type":"application/json"
         },
         body: JSON.stringify(data)
-    }).then(response => {
-        alert("Successfully registered...");
+    }).then(response => response.json()).then(data => {
+        if(data.status === "success") {
+            document.getElementById("status").classList.add("text-success");
+        } else {
+            document.getElementById("status").classList.add("text-danger");
+        }
+        document.getElementById("status").innerText = data.message;
     });
 }
 
