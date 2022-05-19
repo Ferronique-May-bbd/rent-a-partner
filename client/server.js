@@ -18,15 +18,19 @@ app.get('/home', (req, res) => {
     res.sendFile(path.resolve('', 'home.html'));
 });
 
-app.get('/login', async (req, res) => {
+app.get('/login', async(req, res) => {
     res.sendFile(path.resolve('', 'login.html'))
 });
 
-app.get('/register', async (req, res) => {
+app.get('/register', async(req, res) => {
     res.sendFile(path.resolve('', 'register.html'))
 });
 
-app.get('/browse-partners', async (req, res) => {
+app.get('/packages', async(req, res) => {
+    res.sendFile(path.resolve('', 'packages.html'))
+});
+
+app.get('/browse-partners', async(req, res) => {
     res.sendFile(path.resolve('', 'browse-partners.html'))
 });
 

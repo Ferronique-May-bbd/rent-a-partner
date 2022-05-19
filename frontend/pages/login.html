@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login.css" class="css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <script src="https://kit.fontawesome.com/fe4b986857.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <form id="login" class="form-section">
+            <button type="button" class="btn btn-blue">Sign in with Google <i class="fa-solid fa-repeat"></i></button>
+            <button type="button" class="btn btn-blue">Sign in with Facebook <i class="fa-solid fa-repeat"></i></button>
+            
+            <hr>
+            
+            <label for="email" class="lbl">Username<i class="required"></i></label>
+            <input id="email" name="email" type="email" class="control" placeholder="Enter email" maxlength="150" required/>
+            
+            <label for="password" class="lbl">Password<i class="required"></i></label>
+            <input id="password" name="password" type="password" class="control" placeholder="Enter password" required/>
+            
+            <button type="submit" class="btn btn-peach">Sign in</button>
+            <p id="status" class="text-danger"></p>
+            <p class="lbl-center">Are you a new user?</p>
+            <button onclick="location.href='/register'" type="button" class="btn btn-peach">Create an account</button>
+        </form>
+    </main>
+
+    <script type="module" src="../static/js/login.js"></script>
+</body>
+</html>
