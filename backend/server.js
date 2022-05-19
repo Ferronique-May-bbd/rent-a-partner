@@ -28,6 +28,11 @@ app.get("/roles", async (req, res) => {
     res.send(JSON.stringify(result));
 });
 
+app.get("/suggested-partners", async (req, res) => {
+    let result = await UserService.getSuggestedPartners();
+    res.send(JSON.stringify(result));
+});
+
 app.listen(process.env.PORT || port, () => {
     console.log(`Server is running on port ${port}...`);
 });
