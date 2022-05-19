@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='static/css/style.css'>
+    <link rel='stylesheet' href='static/css/home.css'>
     <link rel="stylesheet" href="../static/css/login.css" class="css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <script src="https://kit.fontawesome.com/fe4b986857.js" crossorigin="anonymous"></script>
+    <script src='static/js/components/footer.js' type='text/javascript' defer></script>
+    <script src='static/js/components/headerLoggedOut.js' type='text/javascript' defer></script>
     <title>Login</title>
 </head>
 <body>
+    <header-logged-out></header-logged-out>
     <main>
         <form id="login" class="form-section">
             <button type="button" class="btn btn-blue" disabled>Sign in with Google <i class="fa-solid fa-repeat"></i></button>
@@ -29,7 +34,7 @@
             <button onclick="location.href='/register'" type="button" class="btn btn-peach">Create an account</button>
         </form>
     </main>
-
+    <footer-component></footer-component>
     <script type="module" src="../static/js/login.js"></script>
 </body>
 </html>
