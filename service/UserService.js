@@ -43,6 +43,22 @@ class UserService {
             });
         });
     }
+
+    static getSuggestedPartners() {
+        let db = new DbContext();
+        let conn = db.getConnection();
+        return new Promise((resolve, reject) => {
+            conn.query("select u.RoleId, u.Name, u.Surname, u.Location, u.ProfilePicUrl, p.* from `User` u join `Profile` p on u.ID = p.UserId where u.roleId = 1;", (error, result) => {
+                if(error) {
+                    return reject(error);
+                }
+                db.closeConnection();
+                return resolve(result);
+            });
+        });
+    }
+
+
 }
 
 module.exports = UserService;

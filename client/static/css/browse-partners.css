@@ -108,6 +108,15 @@ body{
     margin-bottom: 15px;
 }
 
+.btn-light-blue {
+    background-color: #C3E3EE;
+    margin-right: 4px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 18px;
+    padding: 10px 20px;
+}
+
 .datepicker {
     
     padding: 12px 18px;

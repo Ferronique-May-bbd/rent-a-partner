@@ -7,29 +7,32 @@ class ProfileCard extends HTMLElement {
         const partnerName = this.attributes.partnerName.value
         const partnerAge = this.attributes.partnerAge.value
         const partnerDisplayImage = this.attributes.partnerDisplayImage.value
-        const partnerPronouns = this.attributes.partnerPronouns.value
+        const partnerGender = this.attributes.partnerGender.value
         const partnerDistance = this.attributes.partnerDistance.value
+        const partnerHeight = this.attributes.partnerHeight.value
+        const partnerRace = this.attributes.partnerRace.value
+        const partnerLanguage = this.attributes.partnerLanguage.value
         const partnerBio = this.attributes.partnerBio.value
 
       this.innerHTML = `      
         <section id='partner-${partnerId}' class='partner-ad'>
 
-            <section id='partner-${partnerId}' class='card preview' style='background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 68.57%, #000000 100%), url(${partnerDisplayImage != undefined | partnerDisplayImage != null ? partnerDisplayImage : null});'>
+            <section id='partner-${partnerId}' class='card preview' style='background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 68.57%, #000000 100%), url(${partnerDisplayImage != undefined | partnerDisplayImage != null ? partnerDisplayImage : ""});'>
 
                 <h3 class='name'>
-                    ${partnerName != undefined | partnerName != null ? partnerName : null}
+                    ${partnerName != undefined | partnerName != null ? partnerName : ""}
                     <span class='age'>
-                        ${partnerAge != undefined | partnerAge != null ? partnerAge : null}
+                        ${partnerAge != undefined | partnerAge != null ? partnerAge : ""}
                     </span>
                 </h3>
                 
                 <span class='pronouns'>
-                    ${partnerPronouns != undefined | partnerPronouns != null ? partnerPronouns : null}
+                    ${partnerGender != undefined | partnerGender != null ? partnerGender : ""}
                 </span>
 
                 <section class='partner-info'>
                     <span class='distance'>
-                        ${partnerDistance != undefined | partnerDistance != null ? `<i class='fa-solid fa-location-dot'></i> ${partnerDistance}km away` : null}
+                        ${partnerDistance != undefined | partnerDistance != null ? `<i class='fa-solid fa-location-dot'></i> ${partnerDistance}km away` : ''}
                     </span>
                     <a href='#show-bio${partnerId}' class='bio-control-fa-user'><i class='bio-control fa-regular fa-user'></i></a>
                 </section>
@@ -37,19 +40,23 @@ class ProfileCard extends HTMLElement {
             </section>
 
             <section id='show-bio${partnerId}' class='bio-book-partner'>
+                <button class="btn-light-blue">${partnerLanguage != undefined | partnerLanguage != null ? partnerLanguage : ''}</button>
+                <button class="btn-light-blue">${partnerRace != undefined | partnerRace != null ? partnerRace : ''}</button>
+                <button class="btn-light-blue">${partnerHeight != undefined | partnerHeight != null ? partnerHeight : ''}</button>
                 <p class='bio'>
-                    ${partnerBio != undefined | partnerBio != null ? partnerBio : null}
+                    ${partnerBio != undefined | partnerBio != null ? partnerBio : ''}
                 </p>
-                <button onclick='/book-partner?${partnerId}' type='button' class='book-partner-btn-peach'><i class='fa-solid fa-book-open'></i> Book now</button>
+                <a href='/book-partner?${partnerId}'><button type='button' class='book-partner-btn-peach'><i class='fa-solid fa-book-open'></i> Book now</button></a>
             </section>
 
             <section  class='mobile-only'>
-                <button onclick='/suggested-partners' type='button' class='white-btn x-mark-cancel'><i class='fa-solid fa-xmark'></i></button>
-                <button onclick='/save-partner?${partnerId}' type='button' class='white-btn bookmark-partner'><i class='fa-regular fa-bookmark'></i></button>
-                <button onclick='/book-partner?${partnerId}' type='button' class='white-btn save-partner'><i class='fa-solid fa-check'></i></button>
+            <a href='/book-partner?${partnerId}'><button onclick='/suggested-partners' type='button' class='white-btn x-mark-cancel'><i class='fa-solid fa-xmark'></i></button></a>
+            <a href='/book-partner?${partnerId}'><button onclick='/save-partner?${partnerId}' type='button' class='white-btn bookmark-partner'><i class='fa-regular fa-bookmark'></i></button></a>
+            <a href='/book-partner?${partnerId}'><button onclick='/book-partner?${partnerId}' type='button' class='white-btn save-partner'><i class='fa-solid fa-check'></i></button></a>
             </section>
         </section>
       `;
     }
   }
   customElements.define('profile-card', ProfileCard);
+
