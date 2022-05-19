@@ -59,14 +59,42 @@
                             <option value="indian">Indian/Asian</option>
                         </select>
                         <label class="lbl">Age preference</label>
-                        <section class="slidecontainer">
-                            <input type="range" min="18" max="100" value="18" class="slider" id="Age">
-                            <p>Age value: <span id="agevalue"></span></p>
+                        <section class="wrapper">
+                            <section class="values">
+                                <span id="age-range1">
+                                    18
+                                </span>
+                                <span> &dash; </span>
+                                <span id="age-range2">
+                                    100
+                                </span>
+                            </section>
+                            <section class="container">
+                                <section class="slider-track"></section>
+                                <input type="range" min="0" max="300" value="18" id="age-slide-1" oninput="slideOne()">
+                                <input type="range" min="0" max="300" value="35" id="age-slide-2" oninput="slideTwo()">
+                            </section>
                         </section>
-                            <label class="lbl">Height preference</label>
-                        <section class="slidecontainer">
-                            <input type="range" min="50" max="200" value="50" class="slider" id="Height">
+                        <label class="lbl">Height preference</label>
+                        <!-- <section class="slidecontainer">
+                            <input class="singles" type="range" min="50" max="200" value="50" class="slider" id="Height">
                             <p>Height value: <span id="heightvalue"></span> cm</p>
+                        </section> -->
+                        <section class="wrapper">
+                            <section class="values">
+                                <span id="height-range1">
+                                    50
+                                </span>
+                                <span> &dash; </span>
+                                <span id="height-range2">
+                                    300
+                                </span>
+                            </section>
+                            <section class="container">
+                                <section class="slider-track"></section>
+                                <input type="range" min="0" max="300" value="50" id="height-slide-1" oninput="hslideOne()">
+                                <input type="range" min="0" max="300" value="70" id="height-slide-2" oninput="hslideTwo()">
+                            </section>
                         </section>
                         <label class="lbl event-date">Event date<i class="required"></i></label>
                         <input class="control" type="text">
@@ -80,21 +108,81 @@
 
     </main>
     <script type='module' src='js/index.js'></script>
-    <script>
-        var age_slider = document.getElementById("Age");
-        var height_slider = document.getElementById("Height");
-        var age_output = document.getElementById("agevalue");
-        var height_output = document.getElementById("heightvalue");
-        age_output.innerHTML = age_slider.value;
-        height_output.innerHTML = height_slider.value;
-        
-        age_slider.oninput = function() {
-          age_output.innerHTML = this.value;
-        }
+        <script>
+                window.onload = function(){
+            slideOne();
+            slideTwo();
+            hslideOne();
+            hslideTwo();
+            }
 
-        height_slider.oninput = function() {
-          height_output.innerHTML = this.value;
-        }
+            let sliderOne = document.getElementById("age-slide-1");
+            let sliderTwo = document.getElementById("age-slide-2");
+            let displayValOne = document.getElementById("age-range1");
+            let displayValTwo = document.getElementById("age-range2");
+            let minGap = 0;
+            let sliderTrack = document.querySelector(".slider-track");
+            let sliderMaxValue = document.getElementById("age-slide-1").max;
+
+            function slideOne(){
+                if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+                    sliderOne.value = parseInt(sliderTwo.value) - minGap;
+                }
+                displayValOne.textContent = sliderOne.value;
+                fillColor();
+            }
+            function slideTwo(){
+                if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+                    sliderTwo.value = parseInt(sliderOne.value) + minGap;
+                }
+                displayValTwo.textContent = sliderTwo.value;
+                fillColor();
+            }
+            function fillColor(){
+                percent1 = (sliderOne.value / sliderMaxValue) * 100;
+                percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+                sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+            }
+
+
+
+            let hsliderOne = document.getElementById("height-slide-1");
+            let hsliderTwo = document.getElementById("height-slide-2");
+            let hdisplayValOne = document.getElementById("height-range1");
+            let hdisplayValTwo = document.getElementById("height-range2");
+            let hminGap = 0;
+            let hsliderTrack = document.querySelector(".slider-track");
+            let hsliderMaxValue = document.getElementById("height-slide-1").max;
+
+            function hslideOne(){
+                if(parseInt(hsliderTwo.value) - parseInt(hsliderOne.value) <= hminGap){
+                    hsliderOne.value = parseInt(hsliderTwo.value) - hminGap;
+                }
+                hdisplayValOne.textContent = hsliderOne.value;
+                fillColor();
+            }
+            function hslideTwo(){
+                if(parseInt(hsliderTwo.value) - parseInt(hsliderOne.value) <= minGap){
+                    hsliderTwo.value = parseInt(hsliderOne.value) + minGap;
+                }
+                hdisplayValTwo.textContent = hsliderTwo.value;
+                fillColor();
+            }
+            function fillColor(){
+                percent1 = (sliderOne.value / sliderMaxValue) * 100;
+                percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+                hsliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+            }
+            </script>
+
+            <script>
+            var height_slider = document.getElementById("Height");
+            var height_output = document.getElementById("heightvalue");
+            height_output.innerHTML = height_slider.value;
+            
+            height_slider.oninput = function() {
+            height_output.innerHTML = this.value;
+            }
         </script>
 </body>
 </html>
