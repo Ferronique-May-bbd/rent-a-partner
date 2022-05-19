@@ -4,7 +4,7 @@ html {
 }
 
 main {
-    <<<<<<< HEAD position: fixed;
+    position: fixed;
     top: 5px;
     left: 255px;
     right: 5px;
@@ -13,7 +13,7 @@ main {
     margin: 5px;
     padding: 5px;
     font-family: 'Merriweather', sans-serif;
-    =======max-width: 950px;
+    max-width: 950px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -64,7 +64,6 @@ header>* {
 
 header li {
     list-style: none;
-    >>>>>>>ccf235778c1a0b2b0e7e6e4b723d059fb73ea06e
 }
 
 nav {
@@ -213,24 +212,7 @@ nav .top-nav>li.active a:visited {
 .social-nav__header a {
     margin-right: 30px;
     text-decoration: none;
-    <<<<<<< HEAD color: azure;
-}
-
-#option-1 {
-    padding: 5px;
-    margin: 10px;
-}
-
-#option-2 {
-    padding: 5px;
-    margin: 10px;
-}
-
-#option-3 {
-    padding: 5px;
-    margin: 10px;
-    =======font-size: 16px;
-    font-weight: 600;
+    color: azure;
 }
 
 .social-nav__header a .user-display-image {
@@ -314,5 +296,4 @@ nav .top-nav>li.active a:visited {
     #header-logo {
         font-size: 24px;
     }
-    >>>>>>>ccf235778c1a0b2b0e7e6e4b723d059fb73ea06e
 }
