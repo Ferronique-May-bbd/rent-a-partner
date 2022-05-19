@@ -5,56 +5,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/package.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/package.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
     <script src="https://kit.fontawesome.com/fe4b986857.js" crossorigin="anonymous"></script>
-    <script src="static/components/footer.js" type="text/javascript" defer></script>
-    <script src="static/components/headerLoggedIn.js" type="text/javascript" defer></script>
-    <script src="static/components/headerLoggedOut.js" type="text/javascript" defer></script>
+    <script src="../static/js/components/footer.js" type="text/javascript" defer></script>
+    <script src="../static/js/components/headerLoggedOut.js" type="text/javascript" defer></script>
 
     <title>Rent a Partner Packages</title>
 </head>
 
+<header-logged-out></header-logged-out>
+
 <body>
     <article>
-        <section>
-            <button id="option-1" type="button" onclick="register">
-                <h3 id="tier">Amateur</h3>
-                <p>
-                    <ul>
-                        <li>Partner is available to you for 4 - 6 hours</li>
-                        <li>Hand Holding, hugging, peck on the cheek</li>
-                        <li>Ideal for work events and day time family lunches or dinner</li>
-                        <li></li>
-                    </ul>
-                </p>
-            </button>
+        <h1 id="packages-title">Rent a Partner Packages</h1>
+        <section id="package-tiers">
+            <a href="login.html">
+                <button id="option-1" type="button">
+                    <h3 id="tier-name">Bronze Package</h3>
+                    <h4 id="tier-description">Ideal for work events, family lunches or dinner</h4>
+                    <p>
+                        <ul id="tier-info">
+                            <li>Partner is available to you for 4 - 6 hours</li>
+                            <li>The partner is willing to show light hold hands and kiss your cheek</li>
+                            <li>The partner is willing to co-ordinate an outfit to match yours</li>
+                            <li>The partner is willing to anything within reason</li>
+                        </ul>
+                    </p>
+                </button>
+            </a>
 
-            <button id="option-2" type="button">
-                <h3 id="tier">Professional</h3>
-                <p>
-                    <ul>
-                        <li>Partner is available to you for 4 - 6 hours</li>
-                        <li>Hand Holding, hugging, peck on the cheek</li>
-                        <li></li>
-                        <li>Includes everything from an amateur partner</li>
-                    </ul>
-                </p>
-            </button>
+            <a href="login.html">
+                <button id="option-2" type="button">
+                    <h3 id="tier-name">Silver Package</h3>
+                    <h4 id="tier-description">Ideal for weekend or whole day events</h4>
+                    <p>
+                        <ul id="tier-info">
+                            <li>Partner is available to you for 1 - 2 days</li>
+                            <li>The partner is willing to show light PDA</li>
+                            <li>The partner is willing stage a public girlfriend proposal</li>
+                            <li>The partner offers to help at family events</li>
+                            <li>The partner will brag about you to everyone they meet</li>
+                            <li>Includes everything from an Bronze partner</li>
+                        </ul>
+                    </p>
+                </button>
+            </a>
 
-            <button id="option-3" type="button">
-                <h3 id="tier">Expert</h3>
-                <p>
-                    <ul>
-                        <li>Partner is available to you for 4 - 6 hours</li>
-                        <li>Hand Holding, hugging, peck on the cheek</li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </p>
-            </button>
+            <a href="login.html">
+                <button id="option-3" type="button">
+                    <h3 id="tier-name">Gold Package</h3>
+                    <h4 id="tier-description">Ideal for long weekends and whole week events</h4>
+                    <p>
+                        <ul id="tier-info">
+                            <li>Partner is available to you for 2 days or more</li>
+                            <li>The partner is willing to kiss you and cuddle with you</li>
+                            <li>The partner is willing stage a public proposal</li>
+                            <li>The partner is willing to treat your family as if it was their own</li>
+                            <li>The partner is willing to share a room with you</li>
+                            <li>The partner is willing to bring gifts for the family</li>
+                            <li>The partner is willing to wear matching outfits with you</li>
+                            <li>Includes everything from an Silver partner</li>
+                        </ul>
+                    </p>
+                </button>
+            </a>
 
         </section>
     </article>
@@ -62,7 +79,6 @@
 
     <footer-component></footer-component>
 
-    <script type="module" src="static/js/index.js"></script>
 </body>
 
 </html>
