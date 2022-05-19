@@ -11,16 +11,3 @@ export default class extends BaseView {
         return html;
     }
 }
-
-
-
-function Person(genderOfInterest, height, race) {
-    return new Person(genderOfInterest, height, race);
-}
-
-function search(Person person) {
-    if (person.height != null || person.) {
-
-    }
-
-}
