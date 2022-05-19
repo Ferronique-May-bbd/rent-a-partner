@@ -54,6 +54,7 @@ hr {
     font-size: 16px;
     line-height: 19px;
     color: #0D0F11;
+    cursor: pointer;
 }
 
 .btn-peach {
