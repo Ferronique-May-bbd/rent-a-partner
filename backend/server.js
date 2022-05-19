@@ -9,7 +9,6 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use
 
 const port = 5501;
 
@@ -19,8 +18,9 @@ app.post("/login", async (req, res) => {
 });
 
 app.post("/register", async (req, res) => {
-    let result = await UserService.userRegistration(req.body);
-    res.send(JSON.stringify(result));
+    console.log(req.body);
+    //let result = await UserService.userRegistration(req.body);
+    res.send(JSON.stringify({status:"success"}));
 });
 
 app.get("/roles", async (req, res) => {

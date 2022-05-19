@@ -11,11 +11,12 @@
 </head>
 <body>
     <main>
-        <form method="post" class="form-section">
+        <form class="form-section">
             <h4 class="form-title">Account Details</h4>
 
             <input id="Id" value="0" hidden/>
             <input id="RoleId" hidden/>
+            <input id="ProfilePicUrl" hidden/>
             
             <label class="lbl">Name<i class="required"></i></label>
             <input id="Name" type="text" class="control" maxlength="50" placeholder="Enter your name" required/>
@@ -35,7 +36,7 @@
             </address>
             
             <label class="lbl">Profile Picture<i class="required"></i></label>
-            <input id="ProfilePicUrl" type="file" class="control" placeholder="Select your profile picture" required/>
+            <input id="profilePic" type="file" class="control" placeholder="Select your profile picture" required/>
             
             <h4 class="form-title">Profile Details</h4>
 
@@ -70,7 +71,7 @@
             <label class="lbl">Bio</label>
             <textarea id="Bio" class="control" maxlength="1000" placeholder="Start typing here" rows="10"></textarea>
             
-            <button type="button" class="btn btn-peach">Create account</button>
+            <button type="submit" class="btn btn-peach">Create account</button>
             <p class="lbl-center">Already have an account?</p>
             <button onclick="location.href='/login'" type="button" class="btn btn-blue">Sign in</button>
         </form>
