@@ -7,6 +7,7 @@ main {
     background-color: aliceblue;
     margin: 5px;
     padding: 5px;
+    font-family: 'Merriweather', sans-serif;
 }
 
 nav {
@@ -30,4 +31,19 @@ li {
 li a {
     text-decoration: none;
     color: azure;
+}
+
+#option-1 {
+    padding: 5px;
+    margin: 10px;
+}
+
+#option-2 {
+    padding: 5px;
+    margin: 10px;
+}
+
+#option-3 {
+    padding: 5px;
+    margin: 10px;
 }
