@@ -36,6 +36,10 @@ app.get("/suggested-partners", async (req, res) => {
     res.send(JSON.stringify(result));
 });
 
+app.get("/get-partner?:id", async (req, res) => {
+    console.log(req.params.id)
+});
+
 app.listen(process.env.PORT || port, () => {
     console.log(`Server is running on port ${port}...`);
 });
