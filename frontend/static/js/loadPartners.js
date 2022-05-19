@@ -8,7 +8,12 @@ const getPartners = async() => {
     }
 }
 
-
+const calculateAge = (dateOfBirth) => {
+    const today = new Date().getFullYear();
+    const dob = new Date(dateOfBirth).getFullYear();
+    return today-dob
+    
+}
 
 const renderPartners = async() =>  {
     let partners = await getPartners();
@@ -17,20 +22,20 @@ const renderPartners = async() =>  {
         let htmlSegment = `<profile-card
                                 partnerId='${partner.UserId}'
                                 partnerName='${partner.Name} ${partner.Surname}'
-                                partnerAge='${partner}'
-                                partnerGender='${partner}'
-                                partnerDistance='${partner}'
-                                partnerBio='${partner}'
-                                partnerDisplayImage='static/images/${partner}'
-                                partnerLanguage='${partner}'
-                                partnerRace='${partner}'
-                                partnerHeight='${partner} cm'>
+                                partnerAge='${calculateAge(partner.DateOfBirth)}'
+                                partnerGender='${partner.Gender}'
+                                partnerDistance='${partner.Location}'
+                                partnerBio='${partner.Bio}'
+                                partnerDisplayImage='static/img/${partner.ProfilePicUrl}'
+                                partnerLanguage='${partner.Language}'
+                                partnerRace='${partner.Race}'
+                                partnerHeight='${partner.Height} cm'>
                             </profile-card>`;
 
         html += htmlSegment;
     });
 
-    let container = document.querySelector('.container');
+    let container = document.querySelector('.card-container');
     container.innerHTML = html;
 }
 
