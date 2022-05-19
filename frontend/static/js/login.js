@@ -15,14 +15,12 @@ function userLogin(e) {
         },
         body: JSON.stringify(data)
     }).then(response => response.json()).then(data => {
-        if(data === []) {
+        if(data.length > 0) {
             sessionStorage.setItem("UserId", JSON.stringify(data));
-            console.log(sessionStorage.getItem("UserId"));
+            //location.href = "/findpartner.html";
         } else {
             document.getElementById("status").innerText = "Email does not exist!!!";
         }
-        
-        //sessionStorage.clear();
     });
 }
 
