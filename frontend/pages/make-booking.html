@@ -4,15 +4,17 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' href='css/style.css'>
-    <link rel='stylesheet' href='css/bookings.css'>
-    <link rel='stylesheet' href='css/browse-partners.css'>
-    <link rel='stylesheet' href='css/login.css'>
+    <link rel='stylesheet' href='static/css/style.css'>
+    <link rel='stylesheet' href='static/css/bookings.css'>
+    <link rel='stylesheet' href='static/css/browse-partners.css'>
+    <link rel='stylesheet' href='static/css/login.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather'>
     <script src='https://kit.fontawesome.com/fe4b986857.js' crossorigin='anonymous'></script>
-    <script src='components/headerLoggedIn.js' type='text/javascript' defer></script>
-    <script src='components/profileCard.js' type='text/javascript' defer></script>
+    <script src='static/js/components/headerLoggedIn.js' type='text/javascript' defer></script>
+    <script src='static/js/components/footer.js' type='text/javascript' defer></script>
+    <script src='static/js/makeBooking.js' type='text/javascript' defer></script>
+    <script src='static/js/components/profileCard.js' type='text/javascript' defer></script>
 
     <title>Book your partner</title>
 </head>
@@ -22,7 +24,7 @@
     <main id='booking-partners'>
         <article>
             <section class="booking-head">
-                <h2>Booking detials</h2>
+                <h2>Booking details</h2>
             </section>
             <section class="booking-desc">
                 <p>Your order summed up</p>
@@ -38,7 +40,7 @@
                     partnerAge='26'
                     partnerGender='She/Her'
                     partnerDistance='16'
-                    partnerDisplayImage='images/profile-test.jpg'
+                    partnerDisplayImage='static/images/profile-test.jpg'
                     partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
                     partnerLanguage='English'
                     partnerRace='Coloured'
@@ -55,24 +57,25 @@
                 </section>
             </article>
             
-
             </section> 
         </article>
-        <form method="post" class="form-section">
-            <label class="lbl">Meetup location<i class="required"></i></label>
-            <address class="w-100">
-                <input id="Location" type="text" class="control" maxlength="50" placeholder="Enter the meetup location" required/>
-            </address>
+        <form method="post" action="/book-event" class="form-section" id="book-event">
+            <label class="lbl">Event title<i class="required"></i></label>
+            <input id="Event-Title" type="text" class="control w-100" maxlength="50" placeholder="Enter the meetup location" required/>
+
             <label class="lbl">Event date<i class="required"></i></label>
-            <address class="w-100">
-                <input id="Location" type="datetime-local" class="control" maxlength="50" placeholder="" required/>
-            </address>
-            <button onclick="location.href='/client/register.html'" type="button" class="btn-booking-margin btn btn-peach">Checkout</button>
+            <input id="Event-date" type="datetime-local" class="control w-100" maxlength="50" placeholder="" required/>
+
+            <label class="lbl">Meetup location<i class="required"></i></label>
+            <input id="Location" type="text" class="control w-100" maxlength="50" placeholder="Enter the meetup location" required/>
+
+            <label class="lbl">Event details<i class="required"></i></label>
+            <input id="Event-date" type="text" class="control w-100" maxlength="50" placeholder="" required/>
+            
+            <button  type="submit" form="book-event" value="Submit" class="btn-booking-margin btn btn-peach">Checkout</button>
         </form>
         
-
-
     </main>
-    <script type='module' src='js/index.js'></script>
+    <footer-component></footer-component>
 </body>
 </html>

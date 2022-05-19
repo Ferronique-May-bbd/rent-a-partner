@@ -205,7 +205,7 @@ body{
     overflow: auto;
 }
   
-  @media screen and (min-device-width: 768px) {
+  @media screen and (min-device-width: 833px) {
     .box{
       width: 70%;
     }
@@ -221,7 +221,8 @@ body{
 
     .card {
         height: 224.25px;
-        max-width: 45%;
+        width: 100%;
+        max-width:345px;
         min-width: 325px;
     }
 
@@ -230,10 +231,11 @@ body{
     }
 
     .bio-book-partner {
-        max-width: 51%;
-        padding: 0;
         width: 100%;
+        max-width:345px;
+        min-width: 400px;
+        padding: 0;
     }
 
     
-  }
+}
