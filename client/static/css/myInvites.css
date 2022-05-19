@@ -1,16 +1,5 @@
 .event_details{
-
-}
-
-.profile_details{
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
+    width: 100%;
 }
 
 .profile_container:hover img{
@@ -36,7 +25,6 @@
 
   .profile_details{
     position: relative;
-    width: 50%;
   }
   
   button{
@@ -47,12 +35,9 @@
     font-weight: 600;
     font-size: 16px;
     color: #0D0F11;
+    position: relative;
+    bottom: 0;
   }
-
-img{
-    width: 50px;
-    height: 50px;
-}
 
 .btn-peach {
     display: inline-block;
@@ -74,16 +59,19 @@ button:active {
     opacity: 0.5;
 }
 
-.card{
+.eventCard{
+    background: #F7F8F9;
     display: flex;
     flex-direction: row;
-    border: 2px solid #EB9390;
-    width: 30%;
-    height: auto;
+    width: auto;
+    border-radius: 16px;
+    padding: 20px;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
 }

@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/myInvites.css" class="css">
+    <script src='static/components/profileCard.js' type='text/javascript' defer></script>
+    <link rel='stylesheet' href='static/css/browse-partners.css'>
+    <link rel='stylesheet' href='static/css/style.css'>
+    <script src='static/components/myInvites.js' type='text/javascript' defer></script>
     <title>My Invites</title>
 </head>
 <body>
     <main>
-        <article class="card">
+        <my-invites></my-invites>
+        <!-- <article class="eventCard">
             <section class="profile_container">
-                <img src="static/images/profile-test.jpg" class="image">
-                <summary class="profile_details">
-                    <h2>User Name</h2>
-                    <span>17</span>&nbsp <span>Female</span>
-                    <p>description</p>
-                </summary>
+                <profile-card
+                partnerId='1'
+                partnerName='Name'
+                partnerAge='26'
+                partnerPronouns='She/Her'
+                partnerDistance='16'
+                partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
+                partnerDisplayImage='static/images/profile-test.jpg'>
+                </profile-card>
             </section>
             <section>
                 <summary class="event_details">
@@ -28,14 +36,17 @@
                 <button class="btn-blue">Decline</button>
             </section>
         </article>
-        <article class="card">
+        <article class="eventCard">
             <section class="profile_container">
-                <img src="static/images/profile-test.jpg">
-                <summary class="profile_details">
-                    <h2>User Name</h2>
-                    <span>17</span>&nbsp <span>Female</span>
-                    <p>description</p>
-                </summary>
+                <profile-card
+                partnerId='1'
+                partnerName='Name'
+                partnerAge='26'
+                partnerPronouns='She/Her'
+                partnerDistance='16'
+                partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
+                partnerDisplayImage='static/images/profile-test.jpg'>
+                </profile-card>
             </section>
             <section>
                 <summary class="event_details">
@@ -46,7 +57,7 @@
                 <button class="btn-peach">Accept</button>
                 <button class="btn-blue">Decline</button>
             </section>
-        </article>
+        </article> -->
     </main>
 </body>
 </html>
