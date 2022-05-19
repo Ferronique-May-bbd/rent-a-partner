@@ -33,19 +33,9 @@
         <article>
             
             <article class="partner-booking-details">
+                <section id="userDetails">
 
-                <profile-card
-                    partnerId='1'
-                    partnerName='Name'
-                    partnerAge='26'
-                    partnerGender='She/Her'
-                    partnerDistance='16'
-                    partnerDisplayImage='static/images/profile-test.jpg'
-                    partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
-                    partnerLanguage='English'
-                    partnerRace='Coloured'
-                    partnerHeight='156cm'>
-                </profile-card>
+                </section>
                 
                 <section class='description'>
                     <p>Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. </p>
@@ -59,23 +49,24 @@
             
             </section> 
         </article>
-        <form method="post" action="/book-event" class="form-section" id="book-event">
-            <label class="lbl">Event title<i class="required"></i></label>
-            <input id="Event-Title" type="text" class="control w-100" maxlength="50" placeholder="Enter the meetup location" required/>
+        <form class="form-section">
+            <label for="Title" class="lbl">Event title<i class="required"></i></label>
+            <input id="Title" name="Title" type="text" class="control w-100" maxlength="50" placeholder="Enter the meetup location" required/>
 
-            <label class="lbl">Event date<i class="required"></i></label>
-            <input id="Event-date" type="datetime-local" class="control w-100" maxlength="50" placeholder="" required/>
+            <label for="Date" class="lbl">Event date<i class="required"></i></label>
+            <input id="Date" name="Date" type="date" class="control w-100" maxlength="50" placeholder="" required/>
 
-            <label class="lbl">Meetup location<i class="required"></i></label>
-            <input id="Location" type="text" class="control w-100" maxlength="50" placeholder="Enter the meetup location" required/>
+            <label for="Location" class="lbl">Meetup location<i class="required"></i></label>
+            <input id="Location" name="Location" type="text" class="control w-100" maxlength="50" placeholder="Enter the meetup location" required/>
 
-            <label class="lbl">Event details<i class="required"></i></label>
-            <input id="Event-date" type="text" class="control w-100" maxlength="50" placeholder="" required/>
+            <label for="Description" class="lbl">Event details<i class="required"></i></label>
+            <input id="Description" name="Description" type="text" class="control w-100" maxlength="50" placeholder="" required/>
             
-            <button  type="submit" form="book-event" value="Submit" class="btn-booking-margin btn btn-peach">Checkout</button>
+            <button  type="submit" value="Submit" class="btn-booking-margin btn btn-peach">Checkout</button>
         </form>
         
     </main>
     <footer-component></footer-component>
+    <script type="module" src="../static/js/make-booking.js"></script>
 </body>
 </html>
