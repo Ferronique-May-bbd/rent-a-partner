@@ -20,9 +20,9 @@ app.post("/login", async (req, res) => {
 app.post("/register", async (req, res) => {
     try {
         await UserService.userRegistration(req.body);
-        return JSON.stringify({status:"success", message:"Registered successfully..."});
+        res.send(JSON.stringify({status:"success", message:"Registered successfully..."}));
     } catch(error) {
-        return JSON.stringify({status:"error", message:"An error occurred!!!"});
+        res(JSON.stringify({status:"error", message:"An error occurred!!!"}));
     }
 });
 
