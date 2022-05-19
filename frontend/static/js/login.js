@@ -15,7 +15,7 @@ function userLogin(e) {
     }).then(response => response.json()).then(data => {
         if(data.length > 0) {
             sessionStorage.setItem("UserId", JSON.stringify(data));
-            console.log(sessionStorage.getItem("UserId"));
+            location.href = "/browse-partners"
         } else {
             document.getElementById("status").innerText = "Email does not exist!!!";
         }
@@ -25,8 +25,4 @@ function userLogin(e) {
 document.addEventListener("DOMContentLoaded", () => {
     var form = document.querySelector("form");
     form.addEventListener('submit', userLogin);
-
-    document.querySelector("#fileUpload").addEventListener("change", e => {
-        uploadImage(e);
-    })
 });
