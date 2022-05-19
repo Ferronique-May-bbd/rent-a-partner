@@ -10,7 +10,7 @@ class Footer extends HTMLElement {
                 <ul>
                     <li><a href='#top'>Back to top</a></li>
                     <li><a href='about-us'>About us</a></li>
-                    <li><a href='suggested-partners'>Book</a></li>
+                    <li><a href='browse-partners'>Book</a></li>
                 </ul>
                 <ul>
                     <li><a href='terms-and-conditions'>Terms and conditions</a></li>
