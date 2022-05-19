@@ -7,13 +7,13 @@ const path = require("path");
 const app = express();
 const port = 5501;
 
-app.post("/login", async (req, res) => {
+app.post("/login", (req, res) => {
     let result = await UserService.userLogin(req.body);
     res.send(JSON.stringify(result));
 });
 
-app.post("/login", async (req, res) => {
-    let result = await UserService.userRegistration(req.body);
+app.post("/login", (req, res) => {
+    let result = await UserService.user(req.body);
     res.send(JSON.stringify(result));
 });
 
