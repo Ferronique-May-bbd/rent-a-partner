@@ -2,8 +2,6 @@ function userLogin(e) {
     e.preventDefault();
 
     let form = new FormData(e.target);
-    let email = form.get("email");
-    let password = form.get("password");
 
     let data = Object.fromEntries(form.entries());
 

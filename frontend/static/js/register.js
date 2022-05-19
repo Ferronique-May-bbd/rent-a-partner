@@ -12,14 +12,8 @@ function userRegistration(e) {
             "Content-Type":"application/json"
         },
         body: JSON.stringify(data)
-    }).then(response => response.json()).then(data => {
-        if(data === []) {
-            console.log("Registered successfully...");
-        } else {
-            console.log(JSON.stringify(data));
-            console.log("faild!!!");
-            //document.getElementById("status").innerText = "Email does not exist!!!";
-        }
+    }).then(response => {
+        alert("Successfully registered...");
     });
 }
 

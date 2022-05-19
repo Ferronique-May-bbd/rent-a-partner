@@ -18,9 +18,12 @@ app.post("/login", async (req, res) => {
 });
 
 app.post("/register", async (req, res) => {
-    console.log(req.body);
-    //let result = await UserService.userRegistration(req.body);
-    res.send(JSON.stringify({status:"success"}));
+    try {
+        await UserService.userRegistration(req.body);
+        return JSON.stringify({status:"success", message:"Registered successfully..."});
+    } catch(error) {
+        return JSON.stringify({status:"error", message:"An error occurred!!!"});
+    }
 });
 
 app.get("/roles", async (req, res) => {

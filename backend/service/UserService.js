@@ -30,8 +30,19 @@ class UserService {
                 if(error) {
                     return reject(error);
                 }
-                db.closeConnection();
-                return resolve(result);
+                return resolve(new Promise((res, rej) => {
+                    var id = result.insertId;
+                    let qry = `insert into Profile(UserId,Gender,DateOfBirth,GenderOfInterest,Race,Height,Langauge,Bio)
+                    values(${id},'${userDetails.Gender}',STR_TO_DATE('${userDetails.DateOfBirth}'),
+                    '${userDetails.GenderOfInterest}','${userDetails.Race}',${userDetails.Height},
+                    '${userDetails.Language}','${userDetails.Bio}')`;
+                    conn.query(qry, (err, rst) => {
+                        if(error) {
+                            return rej(err);
+                        }
+                        return res(rst);
+                    });
+                }));
             });
         });
     }
