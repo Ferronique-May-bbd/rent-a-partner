@@ -25,8 +25,4 @@ function userLogin(e) {
 document.addEventListener("DOMContentLoaded", () => {
     var form = document.querySelector("form");
     form.addEventListener('submit', userLogin);
-
-    document.querySelector("#fileUpload").addEventListener("change", e => {
-        uploadImage(e);
-    })
 });
