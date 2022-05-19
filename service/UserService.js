@@ -43,6 +43,23 @@ class UserService {
             });
         });
     }
+
+    static getSuggestedPartners(userId) {
+        let db = new DbContext();
+        let conn = db.getConnection();
+        return new Promise((resolve, reject) => {
+            conn.query(`select * from User`, (error, result) => {
+                if(error) {
+                    return reject(error);
+                }
+                db.closeConnection();
+                console.log(userId);
+                return resolve(result);
+            });
+        });
+    }
+
+
 }
 
 module.exports = UserService;
