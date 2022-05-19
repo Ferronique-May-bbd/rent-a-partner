@@ -12,7 +12,6 @@ class InvitesCard extends HTMLElement {
         // const partnerBio = this.attributes.partnerBio.value
 
       this.innerHTML = `<article class="eventCard">
-                    <section class="profile_container">
                         <profile-card
                         partnerId='1'
                         partnerName='Name'
@@ -22,7 +21,6 @@ class InvitesCard extends HTMLElement {
                         partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
                         partnerDisplayImage='static/images/profile-test.jpg'>
                         </profile-card>
-                    </section>
                     <section>
                         <summary class="event_details">
                             <h2>Event Name</h2>
