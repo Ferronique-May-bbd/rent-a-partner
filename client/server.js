@@ -34,6 +34,14 @@ app.get('/browse-partners', async(req, res) => {
     res.sendFile(path.resolve('', 'browse-partners.html'))
 });
 
+app.get('/book-partner?*', async (req, res) => {
+    res.sendFile(path.resolve('', 'bookings.html'))
+});
+
+app.get('/bookings', async (req, res) => {
+    res.sendFile(path.resolve('', 'packages.html'))
+});
+
 app.listen(process.env.PORT || port, () => {
     console.log(`Server is running on port ${port}...`);
 });

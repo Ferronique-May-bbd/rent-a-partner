@@ -8,23 +8,23 @@ class Footer extends HTMLElement {
         <footer id='footer'>
             <section class='footer-max-width'>
                 <ul>
-                    <li><a href='#top'>Back to top</a></li>
-                    <li><a href='about-us'>About us</a></li>
+                    <li><a href='#'>Back to top</a></li>
+                    <li><a href='#about-us'>About us</a></li>
                     <li><a href='browse-partners'>Book</a></li>
                 </ul>
                 <ul>
-                    <li><a href='terms-and-conditions'>Terms and conditions</a></li>
-                    <li><a href='privacy-policy'>Privacy policy</a></li>
-                    <li><a href='copyright'>Copyright</a></li>
+                    <li><a href='#'>Terms and conditions</a></li>
+                    <li><a href='#'>Privacy policy</a></li>
+                    <li><a href='#'>Copyright</a></li>
                 </ul>
                 <ul>
                     <li><a href='packages'>Packages</a></li>
-                    <li><a href='help'>Help</a></li>
-                    <li><a href='about-us#safety'>Safety</a></li>
+                    <li><a href='#'>Help</a></li>
+                    <li><a href='#'>Safety</a></li>
                 </ul>
                 
                 <ul class='socials-logo'>
-                    <li><a class='logo' href='home.html' rel='home'>Rent a partner</a></li>
+                    <li><a class='logo' href='/'>Rent a partner</a></li>
                     <ul class='socials'>
                         <li><a href='https://www.facebook.com/'><i class='fa-brands fa-facebook-f'></i></a></li>
                         <li><a href='https://www.instagram.com/?hl=en'><i class='fa-brands fa-instagram'></i></a></li>

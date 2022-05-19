@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html id='top' lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/bookings.css'>
+    <link rel='stylesheet' href='css/browse-partners.css'>
+    <link rel='stylesheet' href='css/login.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather'>
+    <script src='https://kit.fontawesome.com/fe4b986857.js' crossorigin='anonymous'></script>
+    <script src='components/headerLoggedIn.js' type='text/javascript' defer></script>
+    <script src='components/profileCard.js' type='text/javascript' defer></script>
+
+    <title>Book your partner</title>
+</head>
+<body>
+    <header-logged-in userDisplayImage='https://www.forbes.com/advisor/wp-content/uploads/2021/04/dogecoin.jpeg.jpg' userId='1'></header-logged-in>
+    
+    <main id='booking-partners'>
+        <article>
+            <section class="booking-head">
+                <h2>Booking detials</h2>
+            </section>
+            <section class="booking-desc">
+                <p>Your order summed up</p>
+            </section>
+        </article>
+        <article>
+            
+            <article class="partner-booking-details">
+
+                <profile-card
+                    partnerId='1'
+                    partnerName='Name'
+                    partnerAge='26'
+                    partnerGender='She/Her'
+                    partnerDistance='16'
+                    partnerDisplayImage='images/profile-test.jpg'
+                    partnerBio='Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. '
+                    partnerLanguage='English'
+                    partnerRace='Coloured'
+                    partnerHeight='156cm'>
+                </profile-card>
+                
+                <section class='description'>
+                    <p>Lörem ipsum remynde mynt i premåra krojen. Klustersmitta viskap i deras i emmodern. Monoskapet vavis. Rägisk uberisering om jekrorade multifigisk. Prelån pretoliga poras. </p>
+                    <section class="partner-info-btn">
+                        <button class="btn-light-blue">156 CM</button>
+                        <button class="btn-light-blue">French</button>
+                    </section>
+                    
+                </section>
+            </article>
+            
+
+            </section> 
+        </article>
+        <form method="post" class="form-section">
+            <label class="lbl">Meetup location<i class="required"></i></label>
+            <address class="w-100">
+                <input id="Location" type="text" class="control" maxlength="50" placeholder="Enter the meetup location" required/>
+            </address>
+            <label class="lbl">Event date<i class="required"></i></label>
+            <address class="w-100">
+                <input id="Location" type="datetime-local" class="control" maxlength="50" placeholder="" required/>
+            </address>
+            <button onclick="location.href='/client/register.html'" type="button" class="btn-booking-margin btn btn-peach">Checkout</button>
+        </form>
+        
+
+
+    </main>
+    <script type='module' src='js/index.js'></script>
+</body>
+</html>
