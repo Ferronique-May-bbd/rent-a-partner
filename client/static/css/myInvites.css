@@ -94,3 +94,7 @@ button:active {
 {
     display: none;
 }
+
+.btn-status{
+    background-color: grey;
+}
