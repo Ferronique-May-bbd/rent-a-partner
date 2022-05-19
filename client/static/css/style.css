@@ -26,7 +26,8 @@ a,
 li,
 ul,
 ol,
-span {
+span
+label {
     color: #000000;
     font-family: 'Inter';
 }
@@ -162,9 +163,6 @@ nav .top-nav a:hover, nav .top-nav a:active, nav .top-nav a:focus {
     cursor: pointer;
 }
 
-nav .top-nav > li:hover, nav .top-nav > li:active, nav .top-nav > li:focus, nav .top-nav > li.active {
-    background-color: #000000;
-}
 nav .top-nav > li:hover a:link, nav .top-nav > li:active a:link, nav .top-nav > li:focus a:link, nav .top-nav > li.active a:link, nav .top-nav > li:hover a:visited, nav .top-nav > li:active a:visited, nav .top-nav > li:focus a:visited, nav .top-nav > li.active a:visited {
     color: #3c3c3c;
 }
