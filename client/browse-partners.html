@@ -54,7 +54,23 @@
                             <option value="male">Male</option>
                             <option value="other">Other</option>
                         </select>
-    
+                        <label class="lbl">Race preference</label>
+                        <select id="race-preference-filter" class="control control-select">
+                            <option value="black" >Black</option>
+                            <option value="white">White</option>
+                            <option value="coloured">Coloured</option>
+                            <option value="indian">Indian/Asian</option>
+                        </select>
+                        <label class="lbl">Age preference</label>
+                        <section class="slidecontainer">
+                            <input type="range" min="18" max="100" value="18" class="slider" id="Age">
+                            <p>Age value: <span id="agevalue"></span></p>
+                        </section>
+                            <label class="lbl">Height preference</label>
+                        <section class="slidecontainer">
+                            <input type="range" min="50" max="200" value="50" class="slider" id="Height">
+                            <p>Height value: <span id="heightvalue"></span> cm</p>
+                        </section>
                         <label class="lbl event-date">Event date<i class="required"></i></label>
                         <input class="control" type="text">
     
@@ -68,5 +84,21 @@
     </main>
     <footer-component></footer-component>
     <script type='module' src='js/index.js'></script>
+    <script>
+        var age_slider = document.getElementById("Age");
+        var height_slider = document.getElementById("Height");
+        var age_output = document.getElementById("agevalue");
+        var height_output = document.getElementById("heightvalue");
+        age_output.innerHTML = age_slider.value;
+        height_output.innerHTML = height_slider.value;
+        
+        age_slider.oninput = function() {
+          age_output.innerHTML = this.value;
+        }
+
+        height_slider.oninput = function() {
+          height_output.innerHTML = this.value;
+        }
+        </script>
 </body>
 </html>
