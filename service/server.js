@@ -2,17 +2,21 @@ const UserService = require("./UserService.js");
 //import UserService from "./UserService.js";
 
 const express = require("express");
+const cors = require("cors");
 const path = require("path");
 
 const app = express();
+app.use(cors({
+    origion:"http://localhost://5500"
+}));
 const port = 5501;
 
-app.post("/login", (req, res) => {
+app.post("/login", async (req, res) => {
     let result = await UserService.userLogin(req.body);
     res.send(JSON.stringify(result));
 });
 
-app.post("/login", (req, res) => {
+app.post("/login", async (req, res) => {
     let result = await UserService.user(req.body);
     res.send(JSON.stringify(result));
 });
