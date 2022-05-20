@@ -75,6 +75,18 @@ class UserService {
         });
     }
 
+    static getUser(id) {
+        let db = new DbContext();
+        let conn = db.getConnection();
+        return new Promise((resolve, reject) => {
+            conn.query("select u.Id, u.Phone, u.Email , u.Location, u.ProfilePicUrl, p.Height , p.Race , p.`Language` , p.Bio  from `User` u join `Profile` p on u.ID = p.UserId where u.Id =" + id + ";", (error, result) => {
+                if(error) {
+                    return reject(error);
+                }
+                db.closeConnection();
+                return resolve(result);
+            });
+        });}
     static getPartnerById(id) {
         let db = new DbContext();
         let conn = db.getConnection();

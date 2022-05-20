@@ -32,6 +32,13 @@ app.get("/roles", async (req, res) => {
     res.send(JSON.stringify(result));
 });
 
+app.get("/get-user?:id", async (req, res) => {
+
+    let result = await UserService.getUser(req.params.id);
+    res.send(JSON.stringify(result));
+
+});
+
 app.get("/suggested-partners", async (req, res) => {
     let result = await UserService.getSuggestedPartners();
     res.send(JSON.stringify(result));
