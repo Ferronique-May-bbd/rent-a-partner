@@ -46,13 +46,13 @@ class ProfileCard extends HTMLElement {
                 <p class='bio'>
                     ${partnerBio != undefined | partnerBio != null ? partnerBio : ''}
                 </p>
-                <a href='/book-partner?${partnerId}'><button type='button' class='book-partner-btn-peach'><i class='fa-solid fa-book-open'></i> Book now</button></a>
+                <a href='/book-partner?id=${partnerId}'><button type='button' class='book-partner-btn-peach'><i class='fa-solid fa-book-open'></i> Book now</button></a>
             </section>
 
             <section  class='mobile-only'>
-            <a href='/book-partner?${partnerId}'><button onclick='/suggested-partners' type='button' class='white-btn x-mark-cancel'><i class='fa-solid fa-xmark'></i></button></a>
-            <a href='/book-partner?${partnerId}'><button onclick='/save-partner?${partnerId}' type='button' class='white-btn bookmark-partner'><i class='fa-regular fa-bookmark'></i></button></a>
-            <a href='/book-partner?${partnerId}'><button onclick='/book-partner?${partnerId}' type='button' class='white-btn save-partner'><i class='fa-solid fa-check'></i></button></a>
+            <a href='/book-partner?id=${partnerId}'><button onclick='/suggested-partners' type='button' class='white-btn x-mark-cancel'><i class='fa-solid fa-xmark'></i></button></a>
+            <a href='/book-partner?id=${partnerId}'><button onclick='/save-partner?id=${partnerId}' type='button' class='white-btn bookmark-partner'><i class='fa-regular fa-bookmark'></i></button></a>
+            <a href='/book-partner?id=${partnerId}'><button onclick='/book-partner?id=${partnerId}' type='button' class='white-btn save-partner'><i class='fa-solid fa-check'></i></button></a>
             </section>
         </section>
       `;
