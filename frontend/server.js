@@ -61,11 +61,11 @@ app.get('/book-partner?*', async (req, res) => {
     res.sendFile(path.resolve('', 'pages/make-booking.html'))
 });
 
-app.get('/bookings', async (req, res) => {
+app.get('/bookings?*', async (req, res) => {
     res.sendFile(path.resolve('', 'pages/booking-history.html'))
 });
 
-app.get('/event-request', async (req, res) => {
+app.get('/event-request?*', async (req, res) => {
     res.sendFile(path.resolve('', 'pages/myInvites.html'))
 });
 
