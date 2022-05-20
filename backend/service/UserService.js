@@ -1,4 +1,3 @@
-const res = require("express/lib/response");
 const DbContext = require("./DBContext");
 
 class UserService {
@@ -34,7 +33,7 @@ class UserService {
                 return resolve(new Promise((res, rej) => {
                     var id = result.insertId;
                     let qry = `insert into Profile(UserId,Gender,DateOfBirth,GenderOfInterest,Race,Height,Langauge,Bio)
-                    values(${id},'${userDetails.Gender}',STR_TO_DATE('${userDetails.DateOfBirth}'),
+                    values(${id},'${userDetails.Gender}',STR_TO_DATE('${userDetails.DateOfBirth}', '%Y-%M-%d'),
                     '${userDetails.GenderOfInterest}','${userDetails.Race}',${userDetails.Height},
                     '${userDetails.Language}','${userDetails.Bio}')`;
                     conn.query(qry, (err, rst) => {

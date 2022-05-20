@@ -1,4 +1,5 @@
 const UserService = require("./service/UserService.js");
+const EventService = require("./service/EventService");
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
@@ -22,7 +23,7 @@ app.post("/register", async (req, res) => {
         await UserService.userRegistration(req.body);
         res.send(JSON.stringify({status:"success", message:"Registered successfully..."}));
     } catch(error) {
-        res(JSON.stringify({status:"error", message:"An error occurred!!!"}));
+        res.send(JSON.stringify({status:"error", message:"An error occurred!!!"}));
     }
 });
 
@@ -39,7 +40,17 @@ app.get("/suggested-partners", async (req, res) => {
 app.get("/partner/:id", async (req, res) => {
     let result = await UserService.getPartnerById(req.params.id);
     res.send(JSON.stringify(result));
-})
+});
+
+app.post("/book", async (req,res) => {
+    try {
+        await EventService.Book(req.body);
+        res.send(JSON.stringify({status:"success", message:"Booked successfully..."}));
+    } catch(error) {
+        console.log(error);
+        res.send(JSON.stringify({status:"error", message:"An error occurred!!!"}));
+    }
+});
 
 app.listen(process.env.PORT || port, () => {
     console.log(`Server is running on port ${port}...`);

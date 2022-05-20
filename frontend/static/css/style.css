@@ -277,6 +277,18 @@ nav .top-nav > li:hover a:link, nav .top-nav > li:active a:link, nav .top-nav > 
 
 }
 
+.text-danger {
+    font-weight: 300;
+    font-size: small;
+    color: red;
+}
+
+.text-success {
+    font-weight: 300;
+    font-size: small;
+    color: greenyellow;
+}
+
 @media only screen and (min-width : 922px) {
     #header-logo {
         font-size: 24px;

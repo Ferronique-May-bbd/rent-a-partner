@@ -122,15 +122,3 @@ hr {
     width: 100%;
     text-align: center;;
 }
-
-.text-danger {
-    font-weight: 300;
-    font-size: small;
-    color: red;
-}
-
-.text-success {
-    font-weight: 300;
-    font-size: small;
-    color: greenyellow;
-}
