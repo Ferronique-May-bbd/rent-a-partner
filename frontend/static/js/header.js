@@ -6,6 +6,7 @@ const loadHeader = () => {
         let profilePic = jsonUserId[0].ProfilePicUrl;
         let userId = jsonUserId[0].Id;
         let roleId = jsonUserId[0].RoleId;
+        console.log(roleId);
         
         html = `<nav>
                     <input type='checkbox' name='toggle-side-menu'>
@@ -15,7 +16,7 @@ const loadHeader = () => {
                     <section class='side-nav-panel'>
                         <ul class='top-nav'>
                         <li><a href='#'>Saved partners <i class='fa-solid fa-bookmark'></i></a></li>
-                        <li><a href='${roleId == 2 ? `event-request?${userId}`  : `bookings?${userId}`}'>Bookings and events <i class='fa-solid fa-book-open'></i></a></li>
+                        <li><a href='${roleId == 1 ? `event-request?${userId}`  : `bookings?${userId}`}'>Bookings and events <i class='fa-solid fa-book-open'></i></a></li>
                         <li><a href='#'>Help <i class='fa-regular fa-circle-question'></i></a></li>
                         <li><a href='/packages'>Packages <i class='fa-solid fa-cubes-stacked'></i></a></li>
                         <li class='header-mobile'><a href='/#about-us'>About us <i class='fa-solid fa-circle-info'></i></a></li>
