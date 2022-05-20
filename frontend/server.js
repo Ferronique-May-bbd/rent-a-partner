@@ -66,7 +66,7 @@ app.get('/bookings?*', async (req, res) => {
 });
 
 app.get('/event-request?*', async (req, res) => {
-    res.sendFile(path.resolve('', 'pages/myInvites.html'))
+    res.sendFile(path.resolve('', 'pages/pending-events.html'))
 });
 
 app.listen(process.env.PORT || port, () => {

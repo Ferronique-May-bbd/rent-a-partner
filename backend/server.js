@@ -52,6 +52,11 @@ app.post("/book", async (req,res) => {
     }
 });
 
+app.get("/pending-events/:id", async (req, res) => {
+    let result = await EventService.getPendingEvents(req.params.id);
+    res.send(JSON.stringify(result));
+});
+
 app.listen(process.env.PORT || port, () => {
     console.log(`Server is running on port ${port}...`);
 });
