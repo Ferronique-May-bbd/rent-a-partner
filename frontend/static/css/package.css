@@ -39,7 +39,7 @@ button {
 
 #tier-info {
     text-align: left;
-    width: 33.3vw
+    max-width: 33.3vw;
 }
 
 #packages-title {
@@ -67,124 +67,28 @@ button {
     padding: 0px 0px 25px 20px;
 }
 
-@media only screen and (min-device-width: 768px) {
-    #option-1 {
-        border-color: #b78727;
-        transition: transform .2s;
-    }
-    #option-1:hover {
-        transform: scale(1.1);
-        border-width: 5px;
-    }
-    #option-2 {
-        border-color: #aaa9ad;
-        transition: transform .2s;
-    }
-    #option-2:hover {
-        transform: scale(1.1);
-        border-width: 10px;
-    }
-    #option-3 {
-        border-color: #D4AF37;
-        transition: transform .2s;
-    }
-    #option-3:hover {
-        transform: scale(1.1);
-        border-width: 10px;
-        font-weight: 35px;
-    }
-    button {
-        padding: 5px;
-        margin: 5px;
-        width: 30vw;
-        height: 40vh;
-        display: block;
-    }
-    #tier-info {
-        text-align: left;
-        width: 33.3vw;
-        height: 40vh;
-    }
-    #packages-title {
-        text-align: center;
-        font-size: 75px;
-        font-weight: 55px;
-        font-family: 'Inter';
-    }
-    #tier-name {
-        font-size: 24px;
-        font-weight: 30px;
-    }
-    #tier-description {
-        font-size: 15px;
-        font-weight: 15px;
-    }
+@media only screen and (max-width: 1187px) {
     #package-tiers {
-        justify-content: space-evenly;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0px 0px 25px 20px
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    button{
+        height:max-content;
+    }
+
+    h1{
+        font-size: 3rem !important;
     }
 }
 
-@media only screen and (min-width: 922px) {
-    #option-1 {
-        border-color: #b78727;
-        transition: transform .2s;
+@media only screen and (max-width: 510px) {
+    h3{
+        font-size: 1.5rem !important;
     }
-    #option-1:hover {
-        transform: scale(1.1);
-        border-width: 10px;
-        font-weight: 35px;
-    }
-    #option-2 {
-        border-color: #aaa9ad;
-        transition: transform .2s;
-    }
-    #option-2:hover {
-        transform: scale(1.1);
-        border-width: 10px;
-        font-weight: 35px;
-    }
-    #option-3 {
-        border-color: #D4AF37;
-        transition: transform .2s;
-    }
-    #option-3:hover {
-        transform: scale(1.1);
-        border-width: 10px;
-        font-weight: 35px;
-    }
-    button {
-        padding: 5px;
-        margin: 5px;
-        width: 30vw;
-        height: 40vh;
-    }
-    #tier-info {
-        text-align: left;
-        width: 33.3vw
-    }
-    #packages-title {
-        text-align: center;
-        font-size: 75px;
-        font-weight: 55px;
-        font-family: 'Inter';
-    }
-    #tier-name {
-        font-size: 35px;
-        font-weight: 30px;
-    }
-    #tier-description {
-        font-size: 20px;
-        font-weight: 30px;
-    }
-    #package-tiers {
-        justify-content: space-evenly;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0px 0px 25px 20px
+
+    h4{
+        font-size: 1rem !important;
     }
 }
